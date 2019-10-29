@@ -1,0 +1,22 @@
+<div class="col-md-12">
+  <div class="group">
+    <%= link_to "New Group", new_group_path, class: "btn btn-primary pull-right" %>
+  </div>
+
+  <table class="table table-striped table-bordered table-hover text-center">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Title</td>
+        <td>Description</td>
+        <td>Creator </td>
+        <td colspan="2">操作</td>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= render :partial => "group_item", :collection => @groups, :as => :groups %>
+    </tbody>
+  </table>
+</div>
