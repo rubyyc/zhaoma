@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
-  # before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new]
+  before_action :require_is_admin
   def index_bak
     flash[:notice] = "早安！你好！"
     flash[:alert] = "晚安！该睡了！"
@@ -64,5 +65,12 @@ class WelcomeController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :content, :tag_ids => [])
+  end
+
+  def require_is_admin
+    if !current_user.admin?
+      flash[:alert] = "暂无权限"
+      redirect_to root_path
+    end
   end
 end
