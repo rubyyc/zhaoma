@@ -1,0 +1,14 @@
+<tr>
+  <td>#</td>
+  <td><%= link_to(post.title, post_path(post)) %></td>
+  <td><%= render_post_description(post) %></td>
+  <td><%= group.user.email %></td>
+  <td>
+    <% if current_user && current_user == post.user %>
+      <%= link_to("Edit", edit_group_path(post), class: "btn btn-sm btn-default")%>
+      <%= link_to("Delete", group_path(post),    class: "btn btn-sm btn-default",
+                  method: :delete, data: { confirm: "Are you sure?" } )%>
+    <% end %>
+  </td>
+
+</tr>
