@@ -17,3 +17,9 @@
 //= require bootstrap/dropdown
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener("turbolinks:load", function() {
+    setTimeout(function () {
+        $(".alert-dismissable").hide();
+    }, 2000);
+});
