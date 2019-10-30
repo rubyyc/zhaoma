@@ -1,6 +1,9 @@
 <tr>
   <td>#</td>
-  <td><%= link_to(job.title, job_path(job)) %></td>
+  <td>
+    <%= render_job_status(job) %>
+    <%= link_to(job.title, job_path(job)) %>
+  </td>
   <td><%= render_job_description(job) %></td>
   <td>
     <%# if current_user && current_user == job.user %>
