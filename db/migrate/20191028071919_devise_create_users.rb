@@ -36,6 +36,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :role, null: false, default: "guest"
       t.boolean :is_admin, default: false
 
+
       t.timestamps null: false
     end
 

@@ -1,0 +1,13 @@
+<tr>
+  <td>#</td>
+  <td><%= link_to(post.title, post_path(post)) %></td>
+  <td><%= render_post_description(post) %></td>
+  <td>
+    <% if current_user && current_user == post.user %>
+      <%= link_to("Edit", edit_post_path(post), class: "btn btn-sm btn-info")%>
+      <%= link_to("Delete", post_path(post),    class: "btn btn-sm btn-danger",
+                  method: :delete, data: { confirm: "Are you sure?" } )%>
+    <% end %>
+  </td>
+
+</tr>
