@@ -5,14 +5,29 @@
 
   <table class="table table-striped table-bordered table-hover text-center">
     <thead>
-      <tr>
-        <td>#</td>
-        <td>Title</td>
-        <td>Description</td>
-        <td colspan="2">操作</td>
+    <tr>
+      <td>
+        职缺
+      </td>
 
-      </tr>
+      <td>
+        收到履历数量
+      </td>
+      <td>
+        薪资下限
+      </td>
+      <td>
+        薪资上限
+      </td>
+      <td>
+        管理选项
+      </td>
+      <td>
+        刊登时间
+      </td>
+    </tr>
     </thead>
+
 
     <tbody>
       <%= render :partial => "job_item", :collection => @jobs, :as => :job %>
