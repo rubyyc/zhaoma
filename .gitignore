@@ -31,4 +31,5 @@
 /config/master.key
 
 /public/uploads
+/.idea/*
 .idea/workspace.xml
