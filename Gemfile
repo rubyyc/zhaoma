@@ -35,6 +35,7 @@ gem 'devise'
 gem 'font-awesome-rails'
 gem 'carrierwave'
 
+gem 'annotate'
 
 
 
