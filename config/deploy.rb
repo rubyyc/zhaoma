@@ -6,7 +6,7 @@ lock "~> 3.11.0"
 
 set :application, "zhaoma"
 set :repo_url, "git@github.com:rubyyc/zhaoma.git"
-set :rbenv_path, '/home/rubyc/.rbenv'
+set :rbenv_path, '/home/deploy/.rbenv'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
